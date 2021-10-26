@@ -24,7 +24,6 @@ metadata:
     name: myzone
     provider_specific: null
     scope: rnd-we
-scope: rnd-we
 spec:
     firewall_group: ''
     is_nsg_needed: false
