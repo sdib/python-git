@@ -1,0 +1,76 @@
+api_version: v1
+kind: LandingZone
+metadata:
+    comment: Created using automation
+    labels:
+        Environment: prod
+    name: test
+    provider_specific: null
+    scope: TST
+spec:
+    cidrs:
+    - 10.4.12.11
+    landingzonetype: Default Azure HUB
+    pop_primary: null
+    pop_secondary: null
+    region: westeurope
+    target: TST
+---
+api_version: v1
+kind: ZoneInstance
+metadata:
+    labels: null
+    landingzone: test
+    name: myzone
+    provider_specific: null
+    scope: TST
+scope: TST
+spec:
+    firewall_group: ''
+    is_nsg_needed: false
+    network_phase: prod
+    zone_type: anz
+---
+api_version: v1
+kind: SubnetInstance
+metadata:
+    comment: null
+    labels: null
+    landingzone: test
+    name: sub
+    provider_specific: null
+    scope: TST
+spec:
+    application_phase: prod
+    availability_zone_instance: Global
+    cidr: 10.0.1.0/24
+    is_group: false
+    is_network_private: false
+    is_shared: false
+    parent: null
+    subnet_type: Mixed
+    vlan: ''
+    vrf: 'null'
+    zone_instance: myzone
+---
+api_version: v1
+kind: SubnetInstance
+metadata:
+    comment: null
+    labels: null
+    landingzone: test
+    name: sub2
+    provider_specific: null
+    scope: TST
+spec:
+    application_phase: prod
+    availability_zone_instance: Global
+    cidr: 10.0.2.0/24
+    is_group: false
+    is_network_private: false
+    is_shared: false
+    parent: null
+    subnet_type: Mixed
+    vlan: ''
+    vrf: 'null'
+    zone_instance: myzone
