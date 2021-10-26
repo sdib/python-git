@@ -6,11 +6,11 @@ metadata:
         Environment: prod
     name: test
     provider_specific: null
-    scope: TST
+    scope: rnd-we
 spec:
     cidrs:
-    - 10.4.12.11
-    landingzonetype: Default Azure HUB
+    - 10.0.0.0/16
+    landingzonetype: Default Azure Spoke
     pop_primary: null
     pop_secondary: null
     region: westeurope
@@ -23,8 +23,8 @@ metadata:
     landingzone: test
     name: myzone
     provider_specific: null
-    scope: TST
-scope: TST
+    scope: rnd-we
+scope: rnd-we
 spec:
     firewall_group: ''
     is_nsg_needed: false
@@ -39,7 +39,7 @@ metadata:
     landingzone: test
     name: sub
     provider_specific: null
-    scope: TST
+    scope: rnd-we
 spec:
     application_phase: prod
     availability_zone_instance: Global
@@ -61,7 +61,7 @@ metadata:
     landingzone: test
     name: sub2
     provider_specific: null
-    scope: TST
+    scope: rnd-we
 spec:
     application_phase: prod
     availability_zone_instance: Global
